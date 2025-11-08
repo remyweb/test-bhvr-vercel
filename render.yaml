@@ -1,0 +1,13 @@
+services:
+  # Web Service - serves both the API and the static frontend
+  - type: web
+    name: bhvr-app
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: bun install && bun run build
+    startCommand: bun run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /api
