@@ -1,0 +1,13 @@
+{
+  "bunVersion": "1.x",
+  "buildCommand": "bun install && bun run build",
+  "devCommand": "bun run dev",
+  "installCommand": "bun install",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api"
+    }
+  ]
+}
